@@ -3,10 +3,18 @@ extends ./_layout/_page.pug
 block vars
   -
     var page = data.pages.index;
+    var slidegalleryData = [
+      { label: 'コーポレート/M&A', color: "#D8A47F" },
+      { label: 'コーポレート/M&A', color: "#EE4B6A" },
+      { label: 'コーポレート/M&A', color: "#0F7173" },
+      { label: 'コーポレート/M&A', color: "#D8A47F" }
+    ];
 
 block content
 
-  .p-slide-gallery
+  .p-slide-gallery(
+    data-slide-gallery = slidegalleryData
+  )
     .p-slide-gallery-body
       .p-slide-gallery-inner
         .p-slide-gallery-item.p-slide-gallery-item--1
